@@ -67,9 +67,9 @@ sudo ip route add 192.168.1.1 dev veth-host
 
 ## Why Add a Route?
 
-Without adding the route, the system doesn't know how to reach 192.168.1.1. When you ping 192.168.1.1, the system checks its routing table to determine where to send the ping packets. If there's no specific route for 192.168.1.1, it won't know which interface to use.
+Without adding the route, the system doesn't know how to reach 192.168.1.1. When we ping 192.168.1.1, the system checks its routing table to determine where to send the ping packets. If there's no specific route for 192.168.1.1, it won't know which interface to use.
 
-By adding the route, you are explicitly telling the system that to reach 192.168.1.1, it should send the traffic through the veth-host interface, which is part of the veth pair connected to the "red" namespace.
+By adding the route, we are explicitly telling the system that to reach 192.168.1.1, it should send the traffic through the veth-host interface, which is part of the veth pair connected to the "red" namespace.
 
 ## Test connectivity
 
